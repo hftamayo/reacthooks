@@ -1,0 +1,28 @@
+/*used by index.js*/
+.container{
+    border: 5px outset red;
+    background-color: lightgreen; 
+}
+
+/*classes for UserOutput.js*/
+.paragraph{
+    border: 5px outset yellowgreen;
+    background-color: lightskyblue; 
+}
+
+.title{
+    font-weight: bold;
+}
+
+.content{
+    font-style: italic;
+
+}
+
+/*classes for UserInput.js*/
+.form{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+}
