@@ -6,7 +6,7 @@ import Todo from './Todo'
 function App(){
   return(
     <div>
-      <Todo />
+      <h2>Primer proyecto con React JS</h2>
     </div>
 
   );
