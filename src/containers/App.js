@@ -7,6 +7,7 @@ function App(){
   return(
     <div>
       <h2>Primer proyecto con React JS</h2>
+      <p>Menu Principal</p>
     </div>
 
   );
