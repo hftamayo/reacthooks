@@ -1,6 +1,6 @@
-import Todo from './components/Todo';
+import Todo from '../components/Todo/Todo';
 
-function Todo(){
+function VerTodo(){
     return(
         <div>
             <h1>My todos</h1>
@@ -8,3 +8,5 @@ function Todo(){
         </div>
     );
 }
+
+export default VerTodo;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Todo from './Todo'
+import VerTodo from './VerTodo';
+import VerExpenses from './VerExpenses';
 
 
 function App(){
