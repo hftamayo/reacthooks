@@ -1,4 +1,6 @@
-import ExpenseItem from '../components/Expenses/ExpenseItem';
+//import ExpenseItem from '../components/Expenses/ExpenseItem';
+import ExpenseItemV2
+    from '../components/Expenses/ExpenseItemV2';
 
 function VerExpenses() {
 
@@ -22,21 +24,21 @@ function VerExpenses() {
     return (
         <div>
             <h1>My expenses</h1>
-            <ExpenseItem
+            <ExpenseItemV2
                 title={expenses[0].title}
                 amount={expenses[0].amount}
                 date={expenses[0].date}>
-            </ExpenseItem>
-            <ExpenseItem
+            </ExpenseItemV2>
+            <ExpenseItemV2
                 title={expenses[1].title}
                 amount={expenses[1].amount}
                 date={expenses[1].date}>
-            </ExpenseItem>
-            <ExpenseItem
+            </ExpenseItemV2>
+            <ExpenseItemV2
                 title={expenses[2].title}
                 amount={expenses[2].amount}
                 date={expenses[2].date}>
-            </ExpenseItem>            
+            </ExpenseItemV2>
         </div>
     );
 }
