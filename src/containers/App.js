@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import VerTodo from './VerTodo';
 import VerExpenses from './VerExpenses';
+import VerExpensesV2 from './VerExpensesV2';
 
 
 function App(){
@@ -9,7 +10,7 @@ function App(){
     <div>
       <h2>Primer proyecto con React JS</h2>
       <p>Menu Principal</p>
-      <VerExpenses />
+      <VerExpensesV2 />
     </div>
 
   );
