@@ -1,7 +1,7 @@
 //lesson39: children props
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
-import Card from './Card';
+import Card from '../UI/Card';
 
 function ExpenseItemV3(data) {
 
