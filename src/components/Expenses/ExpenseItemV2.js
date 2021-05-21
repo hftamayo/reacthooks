@@ -1,7 +1,7 @@
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
 
-function ExpenseItemV2(data) {
+const ExpenseItemV2 = (data) => {
 
     return (
         <div className="expense-item">

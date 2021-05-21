@@ -6,7 +6,7 @@ en un solo archivo, eso dificulta la depuracion
 Se divide en ExpenseDate.js y ExpenseItemV2.js
 */
 
-function ExpenseItem(data) {
+const ExpenseItem = (data) => {
     /*gralmente usamos props pero en realidad la variable 
     puede llamarse de cualquier manera */
 

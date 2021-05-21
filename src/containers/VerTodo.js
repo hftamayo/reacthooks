@@ -1,6 +1,6 @@
 import Todo from '../components/Todo/Todo';
 
-function VerTodo(){
+const VerTodo = () => {
     return(
         <div>
             <h1>My todos</h1>

@@ -5,7 +5,7 @@ import VerExpenses from './VerExpenses';
 import VerExpensesV2 from './VerExpensesV2';
 
 
-function App(){
+const App = () => {
   return(
     <div>
       <h2>Primer proyecto con React JS</h2>

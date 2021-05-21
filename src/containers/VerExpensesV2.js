@@ -2,7 +2,7 @@
 import Expenses
     from '../components/Expenses/Expenses';
 
-function VerExpensesV2() {
+const VerExpensesV2 = () => {
 
     const expenses = [
         {

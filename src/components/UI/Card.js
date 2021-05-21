@@ -1,8 +1,6 @@
 import "./Card.css";
 
-function Card(props){
-
-
+const Card = (props) =>{
     /* esta variable es necesaria para procesar
     todas las clases que vienen del children.
     Al final este es un componente wrapper reusable

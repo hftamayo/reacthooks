@@ -3,7 +3,7 @@ import './Expenses.css';
 import ExpenseItemV3 from './ExpenseItemV3';
 import Card from '../UI/Card';
 
-function Expenses(props) {
+const Expenses = (props) => {
     return (
         <Card className="expenses">
             <div>
