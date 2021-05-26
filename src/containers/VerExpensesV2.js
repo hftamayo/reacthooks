@@ -1,4 +1,6 @@
 //import ExpenseItem from '../components/Expenses/ExpenseItem';
+import NewExpense
+    from '../components/Expenses/NewExpense/NewExpense';
 import Expenses
     from '../components/Expenses/Expenses';
 
@@ -29,6 +31,7 @@ const VerExpensesV2 = () => {
         <div>
             <h1>My expenses</h1>
             {/* assignment 1 */}
+            <NewExpense />
             <Expenses
                 records={expenses}>
             </Expenses>
