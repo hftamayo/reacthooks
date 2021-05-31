@@ -4,16 +4,20 @@ import './ExpenseForm.css';
 const ExpenseForm = () => {
     //no puedo llamar useState mas de una vez
     //el evento onChange interpreta todo como string
-//    const [enteredTitle, setEnteredTitle] = useState('');
-//    const [enteredAmount, setEnteredAmount] = useState('');
-//    const [enteredDate, setEnteredDate] = useState('');
+    /*less 56: regresamos a multistate */
+    const [enteredTitle, setEnteredTitle] = useState('');
+    const [enteredAmount, setEnteredAmount] = useState('');
+    const [enteredDate, setEnteredDate] = useState('');
+/*
 const [userInput, setUserInput] = useState({
     enteredTitle: '',
     enteredAmount: '',
     enteredDate: ''
 });
+*/
 
     const titleChangeHandler = (event) => {
+        setEnteredTitle(event.target.value);
         //imprimir conforme el usuario escribe
         console.log(event.target.value);
         //si ignoro los otros 2 objetos se van a sobreescribir
@@ -31,11 +35,11 @@ const [userInput, setUserInput] = useState({
        sin equivocaciones o retrasos
        usando prevState es el enfoque más seguro
        */
-      
+      /* lession 56: regresamos al multiState
        setUserInput((prevState) => {
            return { ...prevState, enteredTitle: event.target.value };
        });
-       
+       */
     };
 
     const amountChangeHandler = (event) => {
@@ -52,7 +56,22 @@ const [userInput, setUserInput] = useState({
         });
     };
 
-    return <form>
+    //este metodo gestiona por si el proceso de submit
+    //pero parseando las variables como yo quiero
+
+    const submitHandler = (event) => {
+        //previene la ejecucion por default submit
+        event.preventDefault();
+        const expenseData = {
+            title: enteredTitle,
+            amount: enteredAmount,
+            date: new Date(enteredDate)
+        };
+        //esto es temporal hasta tener afinada la function, lesson 57
+        console.log(expenseData);
+    };
+
+    return <form onSubmit={submitHandler}>
         <div className="new-expense__controls">
             <div className="new-expense__control">
                 <label>Title</label>
