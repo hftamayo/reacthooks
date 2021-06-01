@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ExpenseForm.css';
 
-const ExpenseForm = () => {
+const ExpenseFormV2 = (props) => {
     //no puedo llamar useState mas de una vez
     //el evento onChange interpreta todo como string
     /*less 56: regresamos a multistate */
@@ -75,7 +75,8 @@ const ExpenseForm = () => {
             date: new Date(enteredDate),
         };
         //esto es temporal hasta tener afinada la function, lesson 57
-        console.log(expenseData);
+        //less58: se sustituye: console.log(expenseData);
+        props.onSaveExpenseData(expenseData);
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
@@ -113,4 +114,4 @@ const ExpenseForm = () => {
     </form>
 };
 
-export default ExpenseForm;
+export default ExpenseFormV2;

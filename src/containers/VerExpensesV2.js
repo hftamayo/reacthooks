@@ -25,17 +25,22 @@ const VerExpensesV2 = () => {
         },
     ];
 
+    const addExpenseHandler = expense => {
+        console.log("from VerExpensesV2");
+        console.log(expense);
+
+    };
+
     //Ctrtl+Shift+I = autoformatting
 
     return (
         <div>
             <h1>My expenses</h1>
             {/* assignment 1 */}
-            <NewExpense />
+            <NewExpense
+                onAddExpense={addExpenseHandler} />
             <Expenses
-                records={expenses}>
-            </Expenses>
-
+                records={expenses} />
         </div>
     );
 }
