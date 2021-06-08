@@ -2,8 +2,6 @@
 //import ExpenseItem from '../components/Expenses/ExpenseItem';
 import NewExpense
     from '../components/Expenses/NewExpense/NewExpense';
-import ExpensesFilter
-    from '../components/Expenses/NewExpense/ExpensesFilter';
 import Expenses
     from '../components/Expenses/Expenses';
 
@@ -41,7 +39,6 @@ const VerExpensesV3 = () => {
             <h1>My expenses</h1>
             <NewExpense
                 onAddExpense={addExpenseHandler} />
-            <ExpensesFilter />
             <Expenses
                 records={expenses} />
         </div>
