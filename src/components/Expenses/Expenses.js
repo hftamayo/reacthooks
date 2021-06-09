@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import './Expenses.css';
-//import ExpenseItemV2 from './ExpenseItemV2';
 import ExpenseItemV3 from './ExpenseItemV3';
 import Card from '../UI/Card';
 import ExpenseFilter from './NewExpense/ExpensesFilter';
 
 const Expenses = (props) => {
-    const [year, setYear] = useState(props.year);
+
     return (
         <div>
             <ExpenseFilter />
