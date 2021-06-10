@@ -8,16 +8,16 @@ const ExpensesFilter = (props) => {
     /* setYear actualiza, por medio de useState, 
     a year de manera asincrona, useState es un hooks
      */
-    setYear(event.target.value);
+    setYear(event);
     console.log("the user is filtering by year");
     console.log("year selected: "+year);
-  }
+  };
 
     return (
         <div className='expenses-filter'>
           <div className='expenses-filter__control'>
             <label>Filter by year</label>
-            <select onSelect={yearChangeHandler}>
+            <select onChange={yearChangeHandler}>
               <option value='2022'>2022</option>
               <option value='2021'>2021</option>
               <option value='2020'>2020</option>

@@ -8,9 +8,9 @@ const Expenses = (props) => {
 
     return (
         <div>
-            <ExpenseFilter />
             <Card className="expenses">
                 <div>
+                    <ExpenseFilter />
                     <ExpenseItemV3
                         title={props.records[0].title}
                         amount={props.records[0].amount}
