@@ -2,22 +2,20 @@ import React, { useState } from 'react';
 import './ExpensesFilter.css';
 
 const ExpensesFilter = (props) => {
-  const [year, setYear] = useState('');
-
   const yearChangeHandler = (event) => {
-    /* setYear actualiza, por medio de useState, 
-    a year de manera asincrona, useState es un hooks
+    /* onChangeFilter es el metodo que permite compartir
+    valores con Expenses.
+    console.log genera salida en la consola del navegador
+    ver con F12
      */
-    setYear(event);
-    console.log("the user is filtering by year");
-    console.log("year selected: "+year);
+    props.onChangeFilter(event.target.value);
   };
 
     return (
         <div className='expenses-filter'>
           <div className='expenses-filter__control'>
             <label>Filter by year</label>
-            <select onChange={yearChangeHandler}>
+            <select value={props.selected} onChange={yearChangeHandler}>
               <option value='2022'>2022</option>
               <option value='2021'>2021</option>
               <option value='2020'>2020</option>
