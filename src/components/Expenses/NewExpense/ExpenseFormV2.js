@@ -19,7 +19,7 @@ const ExpenseFormV2 = (props) => {
     const titleChangeHandler = (event) => {
         setEnteredTitle(event.target.value);
         //imprimir conforme el usuario escribe
-        console.log(event.target.value);
+        //console.log(event.target.value);
         //si ignoro los otros 2 objetos se van a sobreescribir
         //por eso uso el spread operator
         //para recuperar su valor
