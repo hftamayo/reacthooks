@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import NewExpense from "../components/Expenses/NewExpense/NewExpense";
 import Expenses from "../components/Expenses/Expenses";
+import "../components/Expenses/NewExpense/ExpenseForm.css";
 
 const DUMMY_EXPENSES = [
   {
@@ -50,12 +51,19 @@ const VerExpensesV3 = () => {
    });
   };
 
+  const showFormHandler = () => {
+    console.log("fuck the police");
+  }
+
   //Ctrtl+Shift+I = autoformatting
 
   return (
     <div>
       <h1>My expenses</h1>
       <NewExpense onAddExpense={addExpenseHandler} />
+      <div className="new-expense__actions">
+          <button onClick={showFormHandler}>Add New Expense</button>
+      </div>      
       <Expenses records={expenses} />
     </div>
   );

@@ -23,18 +23,6 @@ const Expenses = (props) => {
           onChangeFilter={filterChangeHandler}
         />
         <ExpensesList items = {filteredExpense}/>
-        {/* mi solucion al assignment 3
-        {props.records
-          .filter((expense) => expense.date.getFullYear().toString() === filteredYear)
-          .map((filteredExpense) => (
-            <ExpenseItemV3
-              key={filteredExpense.id}
-              title={filteredExpense.title}
-              amount={filteredExpense.amount}
-              date={filteredExpense.date}
-            />
-          ))}        
-        */}
       </Card>
     </div>
   );
