@@ -24,8 +24,9 @@ const ExpenseFormV2 = (props) => {
   };
 
   const hideFormHandler = () => {
+    console.log("el status del form es: "+currentStatusForm);
     setCurrentStatusForm(false);
-    console.log("hay que ocultar el form");
+    console.log("y lo quiero pasar a: "+currentStatusForm);    
   }
 
   //este metodo gestiona por si el proceso de submit

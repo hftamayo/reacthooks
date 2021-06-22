@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './NewExpense.css';
 import ExpenseFormV2 from './ExpenseFormV2';
 
 
 const NewExpense = (props) => {
-    const statusForm = props.showForm;
+    const [statusForm, setStatusForm] = useState(props.statusFormHandler);
+    console.log("el valor de statusForm en NewExpense es: "+statusForm);
 
     const saveExpenseDataHandler =
         (enteredExpenseData) => {
@@ -19,7 +20,8 @@ const NewExpense = (props) => {
     return (
         <div className="new-expense">
             <ExpenseFormV2
-                onSaveExpenseData={saveExpenseDataHandler} currentStatusForm={statusForm}/>
+                onSaveExpenseData={saveExpenseDataHandler} 
+                currentStatusForm={statusForm}/>
         </div>
     )
 };
