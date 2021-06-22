@@ -54,7 +54,7 @@ const VerExpensesV3 = () => {
       {showForm && (
         <NewExpense
           onAddExpense={addExpenseHandler}
-          statusForm={statusFormHandler}
+          currentStatusForm={statusFormHandler}
         />
       )}
       <div className="new-expense__actions">

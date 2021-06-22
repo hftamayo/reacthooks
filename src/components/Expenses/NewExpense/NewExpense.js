@@ -4,8 +4,7 @@ import ExpenseFormV2 from './ExpenseFormV2';
 
 
 const NewExpense = (props) => {
-    const [statusForm, setStatusForm] = useState(props.statusFormHandler);
-    console.log("el valor de statusForm en NewExpense es: "+statusForm);
+    const [statusForm, setStatusForm] = useState(props.currentStatusForm);
 
     const saveExpenseDataHandler =
         (enteredExpenseData) => {
@@ -21,7 +20,7 @@ const NewExpense = (props) => {
         <div className="new-expense">
             <ExpenseFormV2
                 onSaveExpenseData={saveExpenseDataHandler} 
-                currentStatusForm={statusForm}/>
+                displayingForm={statusForm}/>
         </div>
     )
 };
