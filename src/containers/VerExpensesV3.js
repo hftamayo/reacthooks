@@ -32,6 +32,7 @@ const DUMMY_EXPENSES = [
 
 const VerExpensesV3 = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+  const [showForm, setShowForm] = useState(false);
 
   /*
   la variable local expense se llena por medio del
@@ -52,15 +53,13 @@ const VerExpensesV3 = () => {
   };
 
   const showFormHandler = () => {
-    console.log("fuck the police");
+    setShowForm(true);
   }
-
-  //Ctrtl+Shift+I = autoformatting
 
   return (
     <div>
       <h1>My expenses</h1>
-      <NewExpense onAddExpense={addExpenseHandler} />
+      {showForm && <NewExpense onAddExpense={addExpenseHandler} />}
       <div className="new-expense__actions">
           <button onClick={showFormHandler}>Add New Expense</button>
       </div>      
