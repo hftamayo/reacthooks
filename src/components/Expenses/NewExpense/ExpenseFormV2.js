@@ -9,6 +9,8 @@ const ExpenseFormV2 = (props) => {
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
 
+  const [currentStatusForm, setCurrentStatusForm] = useState(props.statusForm);
+
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
   };
@@ -20,6 +22,11 @@ const ExpenseFormV2 = (props) => {
   const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value);
   };
+
+  const hideFormHandler = () => {
+    setCurrentStatusForm(false);
+    console.log("hay que ocultar el form");
+  }
 
   //este metodo gestiona por si el proceso de submit
   //pero parseando las variables como yo quiero
@@ -71,7 +78,7 @@ const ExpenseFormV2 = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
-          <button type="submit">Cancel</button>
+          <button onClick={hideFormHandler}>Cancel</button>
           <button type="submit">Add Expense</button>
         </div>      
     </form>

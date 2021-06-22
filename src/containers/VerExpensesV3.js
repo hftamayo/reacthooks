@@ -59,7 +59,7 @@ const VerExpensesV3 = () => {
   return (
     <div>
       <h1>My expenses</h1>
-      {showForm && <NewExpense onAddExpense={addExpenseHandler} />}
+      {showForm && <NewExpense onAddExpense={addExpenseHandler} statusForm={showForm} />}
       <div className="new-expense__actions">
           <button onClick={showFormHandler}>Add New Expense</button>
       </div>      
