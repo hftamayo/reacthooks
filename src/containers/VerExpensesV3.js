@@ -32,11 +32,6 @@ const DUMMY_EXPENSES = [
 
 const VerExpensesV3 = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
-  const [showForm, setShowForm] = useState(false);
-
-  let buttonTitle = "";
-  //evaluacion usando ternary operators
-  !showForm ? buttonTitle = "Add New Expense" : buttonTitle = "Cancel Adding";
 
   const addExpenseHandler = (expense) => {
     setExpenses((prevExpenses) => {
@@ -44,22 +39,11 @@ const VerExpensesV3 = () => {
     });
   };
 
-
-  const showFormHandler = () => {
-    setShowForm(!showForm);    
-  };
-
   return (
     <div>
       <h1>My expenses</h1>
-      {showForm && (
-        <NewExpense
-          onAddExpense={addExpenseHandler}
-        />
-      )}
-      <div className="new-expense__actions">
-      <button onClick={showFormHandler}>{buttonTitle}</button>
-      </div>
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <div className="new-expense__actions"></div>
       <Expenses records={expenses} />
     </div>
   );

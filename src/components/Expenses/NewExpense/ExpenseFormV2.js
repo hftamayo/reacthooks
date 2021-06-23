@@ -22,11 +22,7 @@ const ExpenseFormV2 = (props) => {
     setEnteredDate(event.target.value);
   };
 
-  const hideFormHandler = () => {
-    
-  }
-
-
+ 
   //este metodo gestiona por si el proceso de submit
   //pero parseando las variables como yo quiero
   const submitHandler = (event) => {
@@ -77,7 +73,7 @@ const ExpenseFormV2 = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
-          <button onClick={hideFormHandler}>Cancel</button>
+          <button onClick={props.hideFormHandler}>Cancel</button>
           <button type="submit">Add Expense</button>
         </div>      
     </form>
