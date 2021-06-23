@@ -9,7 +9,6 @@ const ExpenseFormV2 = (props) => {
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
 
-  const [displayingForm, setDisplayingForm] = useState(props.displayingForm);
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -24,9 +23,9 @@ const ExpenseFormV2 = (props) => {
   };
 
   const hideFormHandler = () => {
-    setDisplayingForm(false)
-    console.log("quiero pasar el form a: "+displayingForm);    
+    
   }
+
 
   //este metodo gestiona por si el proceso de submit
   //pero parseando las variables como yo quiero
