@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import "./ExpenseForm.css";
 
 const ExpenseFormV2 = (props) => {
-  //no puedo llamar useState mas de una vez
-  //el evento onChange interpreta todo como string
-  /*less 56: regresamos a multistate */
+  
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
@@ -22,9 +20,6 @@ const ExpenseFormV2 = (props) => {
     setEnteredDate(event.target.value);
   };
 
- 
-  //este metodo gestiona por si el proceso de submit
-  //pero parseando las variables como yo quiero
   const submitHandler = (event) => {
     //previene la ejecucion por default submit
     event.preventDefault();
