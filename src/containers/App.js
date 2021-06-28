@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import VerTodo from './VerTodo';
-import VerExpensesV3 from './VerExpensesV3';
+import MenuApps from './MenuApps';
 
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
     <div>
       <h2>Primer proyecto con React JS</h2>
       <p>Menu Principal</p>
-      <VerExpensesV3 />
+      <MenuApps />
     </div>
 
   );
