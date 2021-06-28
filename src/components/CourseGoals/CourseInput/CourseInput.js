@@ -18,6 +18,7 @@ const CourseInput = (props) => {
     event.preventDefault();
     if (enteredValue.trim().length === 0) {
       setIsValid(false);
+      return;
     }
     props.onAddGoal(enteredValue);
   };
