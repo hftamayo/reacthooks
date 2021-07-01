@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import AddUser from './AddUser';
-import './VerGoals.css';
 
 const VerGoals = () => {
     return (
