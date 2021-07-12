@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import AddUser from "./AddUser";
-import UsersList from "./UsersList";
+import React, { useState } from 'react';
+import AddUser from './AddUser';
+import UsersList from './UsersList';
 
-const VerGoals = () => {
+const VerUsers = () => {
   const [usersList, setUsersList] = useState([]);
 
   const addUserHandler = (uName, uAge) => {
@@ -17,9 +17,9 @@ const VerGoals = () => {
   return (
     <div>
       <AddUser onAddUser={addUserHandler} />
-      <UsersList users={[usersList]} />
+      <UsersList users={usersList} />
     </div>
   );
 };
 
-export default VerGoals;
+export default VerUsers;
