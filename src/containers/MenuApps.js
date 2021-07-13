@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import VerExpensesV3 from "./VerExpensesV3";
 import VerGoals from "../components/CourseGoals/VerGoals";
 import VerUsers from "../components/Users/VerUsers";
+import LoginUsers from '../components/LoginUsers/LoginUsers';
 
 const MenuApps = () => {
   return (
@@ -23,6 +24,9 @@ const MenuApps = () => {
             <li>
               <Link to="/users">VerUsers -- Project 1</Link>
             </li>            
+            <li>
+              <Link to="/loginusers">LoginUsers -- Project 2</Link>
+            </li>                        
           </ul>
         </nav>
 
@@ -38,6 +42,9 @@ const MenuApps = () => {
           <Route path="/users">
             <VerUsers />
           </Route>          
+          <Route path='/loginusers'>
+            <LoginUsers />
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Card from '../../UI/Card/Card';
+import Card from '../../UI/Card';
 import classes from './Login.module.css';
 import Button from '../../UI/Button/Button';
 

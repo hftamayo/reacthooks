@@ -4,7 +4,7 @@ import Login from './Login/Login';
 import Home from './Home/Home';
 import MainHeader from './MainHeader/MainHeader';
 
-function App() {
+function LoginUsers() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const loginHandler = (email, password) => {
@@ -28,4 +28,4 @@ function App() {
   );
 }
 
-export default App;
+export default LoginUsers;
