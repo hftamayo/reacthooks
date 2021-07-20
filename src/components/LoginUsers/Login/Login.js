@@ -43,18 +43,18 @@ const Login = (props) => {
     console.log('EFFECT RUNNING');
 
     return () => {
-      console.log("EFFECT CLEANUP->ONLY WHEN PASSWORD IS NOT VALID");
-    }
+      console.log("EFFECT CLEANUP->ONLY WHEN PASSWORD IS LENGTH VALID AND VERIFIED");
+    };
   }, []);
 
-  const { isValid: emailIsValid } =emailState;
+  const { isValid: emailIsValid } = emailState;
   const { isValid: passwordIsValid } = passwordState;
 
   useEffect(() => {
     const identifier = setTimeout(() => {
       console.log('Checking form validity');
       setFormIsValid(emailIsValid && passwordIsValid);
-    }, 500); //->500 significa que
+    }, 500); //->500 significa que el tiempo en segundos que se ejecuta el setTimeOut
 
     return() => {
       console.log('CLEANUP');
@@ -97,7 +97,7 @@ const Login = (props) => {
       <form onSubmit={submitHandler}>
         <div
           className={`${classes.control} ${
-            emailState.isValid === false ? classes.invalid : ""
+            emailState.isValid === false ? classes.invalid : ''
           }`}
         >
           <label htmlFor="email">E-Mail</label>
@@ -111,7 +111,7 @@ const Login = (props) => {
         </div>
         <div
           className={`${classes.control} ${
-            passwordState.isValid === false ? classes.invalid : ""
+            passwordState.isValid === false ? classes.invalid : ''
           }`}
         >
           <label htmlFor="password">Password</label>
