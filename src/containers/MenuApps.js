@@ -4,9 +4,6 @@ import VerExpensesV3 from "./VerExpensesV3";
 import VerGoals from "../components/CourseGoals/VerGoals";
 import VerUsers from "../components/Users/VerUsers";
 import LoginUsers from "../components/LoginUsers/LoginUsers";
-import AuthContext, {
-  AuthContextProvider,
-} from "../components/LoginUsers/store/auth-context";
 
 const MenuApps = () => {
   return (
@@ -45,7 +42,7 @@ const MenuApps = () => {
             <VerUsers />
           </Route>
           <Route path="/loginusers">
-              <LoginUsers />
+            <LoginUsers />
           </Route>
         </Switch>
       </BrowserRouter>

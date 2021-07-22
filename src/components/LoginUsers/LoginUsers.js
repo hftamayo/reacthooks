@@ -8,13 +8,13 @@ import AuthContext from "./store/auth-context";
 function LoginUsers() {
   const ctx = useContext(AuthContext);
   return (
-    <React.fragment>
+    <React.Fragment>
       <MainHeader />
       <main>
         {!ctx.isLoggedIn && <Login />}
         {ctx.isLoggedIn && <Home />}
       </main>
-    </React.fragment>
+    </React.Fragment>
   );
 }
 
