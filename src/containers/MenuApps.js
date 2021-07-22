@@ -3,7 +3,10 @@ import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import VerExpensesV3 from "./VerExpensesV3";
 import VerGoals from "../components/CourseGoals/VerGoals";
 import VerUsers from "../components/Users/VerUsers";
-import LoginUsers from '../components/LoginUsers/LoginUsers';
+import LoginUsers from "../components/LoginUsers/LoginUsers";
+import AuthContext, {
+  AuthContextProvider,
+} from "../components/LoginUsers/store/auth-context";
 
 const MenuApps = () => {
   return (
@@ -23,16 +26,15 @@ const MenuApps = () => {
             </li>
             <li>
               <Link to="/users">VerUsers -- Project 1</Link>
-            </li>            
+            </li>
             <li>
               <Link to="/loginusers">LoginUsers -- Project 2</Link>
-            </li>                        
+            </li>
           </ul>
         </nav>
 
         <Switch>
-          <Route path="/todol">
-          </Route>
+          <Route path="/todol"></Route>
           <Route path="/expenses">
             <VerExpensesV3 />
           </Route>
@@ -41,9 +43,9 @@ const MenuApps = () => {
           </Route>
           <Route path="/users">
             <VerUsers />
-          </Route>          
-          <Route path='/loginusers'>
-            <LoginUsers />
+          </Route>
+          <Route path="/loginusers">
+              <LoginUsers />
           </Route>
         </Switch>
       </BrowserRouter>
