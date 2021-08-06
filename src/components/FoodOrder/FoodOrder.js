@@ -1,14 +1,24 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import Header from './Layout/Header';
 import Meals from './Meals/Meals';
 import Cart from './Cart/Cart';
 
 
-const VerGoals = () => {
+const FoodOrder = () => {
+    const [cartIsShown, setCartIsShown] = useState(false);
+    
+    const showCartHandler = () => {
+        setCartIsShown(true);
+    }
+
+    const hideCartHandler = () => {
+        setCartIsShown(false);
+    }
+
     return(
         <Fragment>
-            <Cart />
-            <Header />
+            {cartIsShown && <Cart onClose={hideCartHandler} />}
+            <Header onShowCart={showCartHandler} />
             <main>
                 <Meals />
             </main>
@@ -17,4 +27,4 @@ const VerGoals = () => {
     );
 }
 
-export default VerGoals;
+export default FoodOrder;
