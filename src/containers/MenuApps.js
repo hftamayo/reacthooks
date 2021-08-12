@@ -5,7 +5,7 @@ import VerGoals from "../components/CourseGoals/VerGoals";
 import VerUsers from "../components/Users/VerUsers";
 import LoginUsers from "../components/LoginUsers/LoginUsers";
 import FoodOrder from "../components/FoodOrder/FoodOrder";
-import UsersList from "../components/UsersListCBased/Users";
+import UserFinder from "../components/UsersListCBased/UserFinder";
 
 const MenuApps = () => {
   return (
@@ -56,7 +56,7 @@ const MenuApps = () => {
             <FoodOrder />
           </Route>          
           <Route path="/userslist">
-            <UsersList />
+            <UserFinder />
           </Route>                    
         </Switch>
       </BrowserRouter>
