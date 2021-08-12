@@ -5,6 +5,7 @@ import VerGoals from "../components/CourseGoals/VerGoals";
 import VerUsers from "../components/Users/VerUsers";
 import LoginUsers from "../components/LoginUsers/LoginUsers";
 import FoodOrder from "../components/FoodOrder/FoodOrder";
+import UsersList from "../components/UsersListCBased/Users";
 
 const MenuApps = () => {
   return (
@@ -31,6 +32,9 @@ const MenuApps = () => {
             <li>
               <Link to="/foodorder">FoodOrder -- Project 3</Link>
             </li>            
+            <li>
+              <Link to="/userslist">UsersList -- Class Based</Link>
+            </li>            
           </ul>
         </nav>
 
@@ -51,6 +55,9 @@ const MenuApps = () => {
           <Route path="/foodorder">
             <FoodOrder />
           </Route>          
+          <Route path="/userslist">
+            <UsersList />
+          </Route>                    
         </Switch>
       </BrowserRouter>
     </div>
