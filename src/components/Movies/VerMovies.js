@@ -5,8 +5,10 @@ import "./VerMovies.module.css";
 
 function VerMovies() {
   const [movies, setMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   async function fetchMoviesHandler() {
+    setIsLoading(true);
     const response = await fetch("https://swapi.dev/api/films");
     const data = await response.json();
 
@@ -19,6 +21,7 @@ function VerMovies() {
       };
     });
     setMovies(transformedMovies);
+    setIsLoading(false);
   }
 
   return (
@@ -27,7 +30,9 @@ function VerMovies() {
         <button onClick={fetchMoviesHandler}>Fetch Movies</button>
       </section>
       <section>
-        <MovieList movies={movies} />
+        {!isLoading && movies.length > 0 && <MovieList movies={movies} />}
+        {!isLoading && movies.length === 0 && <p>press "Fetch Movies" button</p>}
+        {isLoading && <p>Loading...</p>}
       </section>
     </React.Fragment>
   );
