@@ -6,6 +6,7 @@ import VerUsers from "../components/Users/VerUsers";
 import LoginUsers from "../components/LoginUsers/LoginUsers";
 import FoodOrder from "../components/FoodOrder/FoodOrder";
 import UserFinder from "../components/UsersListCBased/UserFinder";
+import VerMovies from "../components/Movies/VerMovies";
 
 const MenuApps = () => {
   return (
@@ -35,6 +36,9 @@ const MenuApps = () => {
             <li>
               <Link to="/userslist">UsersList -- Class Based</Link>
             </li>            
+            <li>
+              <Link to="/vermovies">VerMovies -- API Callbacks</Link>
+            </li>                        
           </ul>
         </nav>
 
@@ -58,6 +62,9 @@ const MenuApps = () => {
           <Route path="/userslist">
             <UserFinder />
           </Route>                    
+          <Route path="/vermovies">
+            <VerMovies />
+          </Route>                              
         </Switch>
       </BrowserRouter>
     </div>
