@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 import MovieList from "./MovieList";
 import "./VerMovies.module.css";
@@ -8,7 +8,13 @@ function VerMovies() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  async function fetchMoviesHandler() {
+  /*
+  using useCallBack and useEffect hooks ensure that will load the data anytime 
+  the component is loaded avoiding click on the fetch movies
+  it won't run when it's not neccesary, so this is for app's performance 
+  */
+
+  const fetchMoviesHandler = useCallback(async() => {
     setIsLoading(true);
     setError(null); //clean all potential previous error
     //working with async we need to use try
@@ -33,7 +39,11 @@ function VerMovies() {
       setError(error.message);
     }
     setIsLoading(false);
-  }
+  }, []);
+
+  useEffect(() => {
+    fetchMoviesHandler();
+  }, [fetchMoviesHandler]);
 
   let content = <p>No movies found</p>;
 
