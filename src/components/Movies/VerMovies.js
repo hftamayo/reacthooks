@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 
 import MovieList from "./MovieList";
+import AddMovie from './AddMovie';
 import "./VerMovies.module.css";
 
 function VerMovies() {
@@ -34,7 +35,6 @@ function VerMovies() {
         };
       });
       setMovies(transformedMovies);
-      setIsLoading(false);
     } catch (error) {
       setError(error.message);
     }
@@ -44,6 +44,10 @@ function VerMovies() {
   useEffect(() => {
     fetchMoviesHandler();
   }, [fetchMoviesHandler]);
+
+  function addMovieHandler(movie){
+    console.log(movie);
+  }
 
   let content = <p>No movies found</p>;
 
@@ -60,6 +64,9 @@ function VerMovies() {
 
   return (
     <React.Fragment>
+      <section>
+        <AddMovie onAddMovie={addMovieHandler} />
+      </section>
       <section>
         <button onClick={fetchMoviesHandler}>Fetch Movies</button>
       </section>
