@@ -25,17 +25,19 @@ function VerMovies() {
       if (!response.ok) {
         throw new Error("Something went wrong");
       }
+      //firebase siempre envia datos en formato json
       const data = await response.json();
+      const loadedMovies = [];
+      for(const key in data){
+        loadedMovies.push({
+          id: key,
+          title: data[key].title,
+          openingText: data[key].openingText,
+          releaseDate: data[key].releaseDate,
+        });
+      }
 
-      const transformedMovies = data.results.map((movieData) => {
-        return {
-          id: movieData.episode_id,
-          title: movieData.title,
-          openingText: movieData.opening_crawl,
-          releaseDate: movieData.release_date,
-        };
-      });
-      setMovies(transformedMovies);
+      setMovies(loadedMovies);
     } catch (error) {
       setError(error.message);
     }
@@ -46,8 +48,16 @@ function VerMovies() {
     fetchMoviesHandler();
   }, [fetchMoviesHandler]);
 
-  function addMovieHandler(movie){
-    console.log(movie);
+  //puesto que esto es una operacion asincrona y obtendremos una promesa
+  //usaremos los modificadores async y awaint
+  async function addMovieHandler(movie){
+    const response = await fetch("https://movieserp-default-rtdb.firebaseio.com/movies.json", {
+      method: 'POST',
+      body: JSON.stringify(movie),
+      headers: {
+        'Content-type': 'application/json'
+      }
+    });
   }
 
   let content = <p>No movies found</p>;
