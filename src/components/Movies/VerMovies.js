@@ -20,7 +20,8 @@ function VerMovies() {
     setError(null); //clean all potential previous error
     //working with async we need to use try
     try {
-      const response = await fetch("https://swapi.dev/api/films");
+      //const response = await fetch("https://swapi.dev/api/films");
+      const response = await fetch("https://movieserp-default-rtdb.firebaseio.com/movies.json");
       if (!response.ok) {
         throw new Error("Something went wrong");
       }
