@@ -8,6 +8,7 @@ import FoodOrder from "../components/FoodOrder/FoodOrder";
 import UserFinder from "../components/UsersListCBased/UserFinder";
 import VerMovies from "../components/Movies/VerMovies";
 import VerCustomHooks from "../components/CustomHooks/VerCustomHooks";
+import VerCHTasks from "../components/CustomHooksTask/VerCHTasks";
 
 const MenuApps = () => {
   return (
@@ -42,7 +43,10 @@ const MenuApps = () => {
             </li>                        
             <li>
               <Link to="/verchooks">CustomHooks</Link>
-            </li>                                    
+            </li>
+            <li>
+              <Link to="/verchtasks">CH Tasks</Link>
+            </li>                                                
           </ul>
         </nav>
 
@@ -71,7 +75,10 @@ const MenuApps = () => {
           </Route>       
           <Route path="/verchooks">
             <VerCustomHooks />
-          </Route>                                        
+          </Route>
+          <Route path="/verchtasks">
+            <VerCHTasks />
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>
