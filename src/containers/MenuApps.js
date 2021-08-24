@@ -7,6 +7,7 @@ import LoginUsers from "../components/LoginUsers/LoginUsers";
 import FoodOrder from "../components/FoodOrder/FoodOrder";
 import UserFinder from "../components/UsersListCBased/UserFinder";
 import VerMovies from "../components/Movies/VerMovies";
+import VerCustomHooks from "../components/CustomHooks/VerCustomHooks";
 
 const MenuApps = () => {
   return (
@@ -39,6 +40,9 @@ const MenuApps = () => {
             <li>
               <Link to="/vermovies">VerMovies -- API Callbacks</Link>
             </li>                        
+            <li>
+              <Link to="/verchooks">CustomHooks</Link>
+            </li>                                    
           </ul>
         </nav>
 
@@ -64,7 +68,10 @@ const MenuApps = () => {
           </Route>                    
           <Route path="/vermovies">
             <VerMovies />
-          </Route>                              
+          </Route>       
+          <Route path="/verchooks">
+            <VerCustomHooks />
+          </Route>                                        
         </Switch>
       </BrowserRouter>
     </div>
