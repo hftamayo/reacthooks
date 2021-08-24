@@ -1,6 +1,6 @@
 import React from 'react';
-import BackwardCounter from './components/BackwardCounter';
-import ForwardCounter from './components/ForwardCounter';
+import BackwardCounter from './BackwardCounter';
+import ForwardCounter from './ForwardCounter';
 
 function VerCustomHooks() {
   return (
