@@ -1,4 +1,5 @@
 import SimpleInput from './SimpleInput';
+import './VerBasicForm.module.css';
 
 function App() {
   return (
