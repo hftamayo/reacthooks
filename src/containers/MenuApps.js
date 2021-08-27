@@ -9,6 +9,7 @@ import UserFinder from "../components/UsersListCBased/UserFinder";
 import VerMovies from "../components/Movies/VerMovies";
 import VerCustomHooks from "../components/CustomHooks/VerCustomHooks";
 import VerCHTasks from "../components/CustomHooksTask/VerCHTasks";
+import VerBasicForm from "../components/BasicForm/VerBasicForm";
 
 const MenuApps = () => {
   return (
@@ -46,7 +47,10 @@ const MenuApps = () => {
             </li>
             <li>
               <Link to="/verchtasks">CH Tasks</Link>
-            </li>                                                
+            </li>      
+            <li>
+              <Link to="/verbasicform">Basic Form</Link>
+            </li>                                                            
           </ul>
         </nav>
 
@@ -79,6 +83,9 @@ const MenuApps = () => {
           <Route path="/verchtasks">
             <VerCHTasks />
           </Route>
+          <Route path="/verbasicform">
+            <VerBasicForm />
+          </Route>          
         </Switch>
       </BrowserRouter>
     </div>
