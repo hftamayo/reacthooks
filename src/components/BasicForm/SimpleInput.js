@@ -10,7 +10,12 @@ const SimpleInput = (props) => {
 
   const formSubmissionHandler = (event) => {
     event.preventDefault();
-    //console.log(enteredName);
+
+    if(enteredName.trim() == ''){
+      return; //cancela la ejecución de todo el metodo
+
+    }
+
     const enteredValue = nameInputRef.current.value;
     console.log("useRef hook incase I won't update value: ", enteredValue);
     /*
