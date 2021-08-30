@@ -3,9 +3,12 @@ import './VerBasicForm.module.css';
 
 function VerBasicForm() {
   return (
-    <div className="app">
-      <SimpleInput />
+    <div className="contenedor">
+      <div className="app">
+        <SimpleInput />
+      </div>
     </div>
+
   );
 }
 
