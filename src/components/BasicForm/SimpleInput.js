@@ -19,7 +19,7 @@ const SimpleInput = (props) => {
 
   const nameInputBlurHandler = (event) => {
     setEnteredNameTouched(true);
-  }
+  };
 
   const formSubmissionHandler = (event) => {
     event.preventDefault();
@@ -61,7 +61,7 @@ const SimpleInput = (props) => {
         )}
       </div>
       <div className="form-actions">
-        <button dissabled={!formIsValid}>Submit</button>
+        <button disabled={!formIsValid}>Submit</button>
       </div>
     </form>
   );
