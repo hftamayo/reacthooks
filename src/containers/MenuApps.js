@@ -10,6 +10,7 @@ import VerMovies from "../components/Movies/VerMovies";
 import VerCustomHooks from "../components/CustomHooks/VerCustomHooks";
 import VerCHTasks from "../components/CustomHooksTask/VerCHTasks";
 import VerBasicForm from "../components/BasicForm/VerBasicForm";
+import FoodOrder2 from "../components/FoodOrder2/FoodOrder2";
 
 const MenuApps = () => {
   return (
@@ -50,7 +51,10 @@ const MenuApps = () => {
             </li>      
             <li>
               <Link to="/verbasicform">Basic Form</Link>
-            </li>                                                            
+            </li>
+            <li>
+              <Link to="/foodorder2">Food Order v2</Link>
+            </li>                                                                                                                                   
           </ul>
         </nav>
 
@@ -86,6 +90,10 @@ const MenuApps = () => {
           <Route path="/verbasicform">
             <VerBasicForm />
           </Route>          
+          <Route path="/foodorder2">
+            <FoodOrder2 />
+          </Route>          
+
         </Switch>
       </BrowserRouter>
     </div>
