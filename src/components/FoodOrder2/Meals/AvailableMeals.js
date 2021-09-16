@@ -8,10 +8,16 @@ import classes from "./AvailableMeals.module.css";
 const AvailableMeals = () => {
   const [meals, setMeals] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [httpError, setHttpError] = useState();
 
   useEffect(() => {
     const fetchMeals = async () => {
       const response = await fetch('https://movieserp-default-rtdb.firebaseio.com/meals.json');
+
+      if(!response.ok){
+        throw new Error('something went wrong');
+      }
+
       const responseData = await response.json(); //este es un objeto
       //el objeto se traduce a un array
       const loadedMeals = [];
@@ -27,13 +33,23 @@ const AvailableMeals = () => {
       setMeals(loadedMeals);
       setIsLoading(false);
     };
-    fetchMeals()
+
+    fetchMeals().catch(error => {
+      setIsLoading(false);
+      setHttpError(error.message);
+    });
   }, []);
 
   if(isLoading){
     return <section className={classes.MealsLoading}>
       <p>Loading data...</p>
     </section>
+  }
+
+  if(httpError){
+    return <setction className={classes.MealsError}>
+      <p>{httpError}</p>
+    </setction>
   }
 
   const mealsList = meals.map((meal) => (
