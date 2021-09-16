@@ -24,6 +24,7 @@ const AvailableMeals = () => {
 
       for(const key in responseData){
         loadedMeals.push({
+          id: key,
           name: responseData[key].name,
           description: responseData[key].description,
           price: responseData[key].price,
@@ -47,15 +48,15 @@ const AvailableMeals = () => {
   }
 
   if(httpError){
-    return <setction className={classes.MealsError}>
+    return <section className={classes.MealsError}>
       <p>{httpError}</p>
-    </setction>
+    </section>
   }
 
   const mealsList = meals.map((meal) => (
     <MealItem
-      id={meal.id}
       key={meal.id}
+      id={meal.id}      
       name={meal.name}
       description={meal.description}
       price={meal.price}
