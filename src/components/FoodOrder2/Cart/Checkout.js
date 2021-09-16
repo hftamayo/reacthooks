@@ -49,7 +49,12 @@ const Checkout = (props) => {
       return;
     }
 
-    //submit the form
+    props.onConfirm({
+      clientName: enteredName,
+      clientCellPhone: enteredCellPhone,
+      clientDelivAddress: enteredDelivAddress,
+      clientMethodPayment: enteredMethodPayment,
+    });
   };
 
   const nameControlClasses = `${classes.control} ${
