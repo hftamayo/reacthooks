@@ -7,15 +7,19 @@ const SimpleInput = (props) => {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredEmailTouched, setEnteredEmailTouched] = useState(false);
 
-  const enteredNameIsValid = enteredName.trim() !== '';
+  const enteredNameIsValid = enteredName.trim() !== "";
   const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
 
-  const enteredEmailIsValid = enteredEmail.trim() !== '';
-  const emailInputIsInvalid = !enteredEmailIsValid && setEnteredEmailTouched;
+  const enteredEmailIsValid = enteredEmail.trim() !=="";
+  /* patrones que no fue necesario usar
+  const pendiente = "^$|^[^@\s]+@[^@\s]+$";
+  const complexPattern = '/^(([^<>()[]\\.,;:s@"]+(.[^<>()[]\\.,;:s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/';
+  */
+  const emailInputIsInvalid = !enteredEmailIsValid && enteredEmailTouched;
 
   let formIsValid = false;
 
-  if(enteredNameIsValid && enteredEmailIsValid){
+  if (enteredNameIsValid && enteredEmailIsValid) {
     formIsValid = true;
   }
 
@@ -25,7 +29,7 @@ const SimpleInput = (props) => {
 
   const emailInputChangeHandler = (event) => {
     setEnteredEmail(event.target.value);
-  }
+  };
 
   const nameInputBlurHandler = (event) => {
     setEnteredNameTouched(true);
@@ -33,7 +37,7 @@ const SimpleInput = (props) => {
 
   const emailInputBlurHandler = (event) => {
     setEnteredEmailTouched(true);
-  }
+  };
 
   const formSubmissionHandler = (event) => {
     event.preventDefault();
@@ -45,7 +49,7 @@ const SimpleInput = (props) => {
       return; //cancela la ejecución de todo el metodo
     }
 
-    console.log(enteredName+"->"+enteredEmail);
+    console.log(enteredName + "->" + enteredEmail);
     /*
     si necesito manipular el DOM: actualizarlo, validar por keystroke entonces se recomienda
     usar useState
@@ -57,12 +61,12 @@ const SimpleInput = (props) => {
 
     setEnteredEmail("");
     setEnteredEmailTouched(false);
-
   };
 
-  const nameInputClasses = nameInputIsInvalid || emailInputIsInvalid
-    ? "form-control invalid"
-    : "form-control";
+  const nameInputClasses =
+    nameInputIsInvalid || emailInputIsInvalid
+      ? "form-control invalid"
+      : "form-control";
 
   return (
     <form onSubmit={formSubmissionHandler}>
@@ -90,10 +94,9 @@ const SimpleInput = (props) => {
           value={enteredEmail}
         />
         {emailInputIsInvalid && (
-          <p className="error-text">Email Address must not be empty</p>
+          <p className="error-text">Email Address is not valid</p>
         )}
       </div>
-
 
       <div className="form-actions">
         <button disabled={!formIsValid}>Submit</button>
