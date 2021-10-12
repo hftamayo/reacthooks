@@ -1,14 +1,11 @@
 import SimpleInput from './SimpleInput';
-import './VerBasicForm.module.css';
+import './VerBasicForm.css';
 
 function VerBasicForm() {
   return (
-    <div className="contenedor">
       <div className="app">
         <SimpleInput />
       </div>
-    </div>
-
   );
 }
 
