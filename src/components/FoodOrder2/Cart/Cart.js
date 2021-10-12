@@ -27,6 +27,7 @@ const Cart = (props) => {
 
   const submitOrderHandler = async (userData) => {
     setIsSubmitting(true);
+    //TODO: implement an error handling function using a const reponse = await fetch()
     await fetch("https://movieserp-default-rtdb.firebaseio.com/orders.json", {
       method: "POST",
       BODY: JSON.stringify({
