@@ -6,10 +6,7 @@
 html {
   font-family: 'Noto Sans JP', sans-serif;
 }
-.contenedor {
-  margin: 0;
-  background-color: #3f3f3f;
-}
+
 
 .app {
   width: 90%;
@@ -87,7 +84,7 @@ button:disabled:active {
 }
 
 .form-actions {
-  text-align: right;
+  text-align: left;
 }
 
 .form-actions button {
