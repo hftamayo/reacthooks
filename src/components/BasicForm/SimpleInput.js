@@ -59,10 +59,10 @@ const SimpleInput = (props) => {
   return (
     <form onSubmit={formSubmissionHandler}>
       <div className={nameInputClasses}>
-        <label htmlFor="name">Your Name</label>
+        <label htmlFor="fname">Your Name</label>
         <input
           type="text"
-          id="name"
+          id="fname"
           onChange={nameChangeHandler}
           onBlur={nameBlurHandler}
           value={enteredName}
@@ -73,10 +73,10 @@ const SimpleInput = (props) => {
       </div>
 
       <div className={emailInputClasses}>
-        <label htmlFor="email">E-mail</label>
+        <label htmlFor="usremail">E-mail</label>
         <input
           type="email"
-          id="name"
+          id="usremail"
           onChange={emailChangeHandler}
           onBlur={emailBlurHandler}
           value={enteredEmail}
