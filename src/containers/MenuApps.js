@@ -10,6 +10,7 @@ import VerMovies from "../components/Movies/VerMovies";
 import VerCustomHooks from "../components/CustomHooks/VerCustomHooks";
 import VerCHTasks from "../components/CustomHooksTask/VerCHTasks";
 import VerBasicForm from "../components/BasicForm/VerBasicForm";
+import Counter from "../components/ReduxCounter/Counter";
 
 const MenuApps = () => {
   return (
@@ -51,6 +52,9 @@ const MenuApps = () => {
             <li>
               <Link to="/verbasicform">Basic Form</Link>
             </li>                                                            
+            <li>
+              <Link to="/reduxcounter">Redux Counter</Link>
+            </li>                                                                        
           </ul>
         </nav>
 
@@ -86,6 +90,9 @@ const MenuApps = () => {
           <Route path="/verbasicform">
             <VerBasicForm />
           </Route>          
+          <Route path="/reduxcounter">
+            <Counter />
+          </Route>                    
         </Switch>
       </BrowserRouter>
     </div>
