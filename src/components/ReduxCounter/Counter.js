@@ -10,6 +10,10 @@ const Counter = () => {
     dispatch({ type: 'increment' });
   };
 
+  const increaseHandler = () => {
+    dispatch({ type: 'increase', amount: 5 });
+  }
+
   const decrementHandler = () => {
     dispatch({ type: 'decrement'});
   };
@@ -23,6 +27,7 @@ const Counter = () => {
       <div className={classes.value}>{counter}</div>
       <div>
         <button onClick={incrementHandler}>Increment</button>
+        <button onClick={increaseHandler}>Increment by 5</button>        
         <button onClick={decrementHandler}>Decrement</button>
       </div>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
@@ -32,7 +37,7 @@ const Counter = () => {
 
 //class based component version of the same component
 
-class Counter extends Component{
+class Counter1 extends Component{
   incrementHandler(){
     this.props.increment();
   }
@@ -51,8 +56,9 @@ class Counter extends Component{
         <h1>Redux Counter</h1>
         <div className={classes.value}>{this.props.counter}</div>
         <div>
-          <button onClick={this.incrementHandler.bind(this)}>Increment</button>
-          <button onClick={this.decrementHandler.bind(this)}>Decrement</button>
+                    
+          <button onClick={this.incrementHandler.bind(this)}>Increment</button>}
+          <button onClick={this.decrementHandler.bind(this)}>Decrement</button>}          
         </div>
         <button onClick={this.toggleCounterHandler}>Toggle Counter</button>
       </main>
