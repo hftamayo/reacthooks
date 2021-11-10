@@ -15,6 +15,7 @@ const counterReducer = (state = initialState, action) => {
             //usar este payload no es eficiente
             //counter: state.counter + 5,
             counter: state.counter + action.amount,
+            //esta linea es necesaria porque se requiere actualizar el state del DOM
             showCounter: state.showCounter
 
         };
