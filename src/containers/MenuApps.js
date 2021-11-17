@@ -11,6 +11,7 @@ import VerCustomHooks from "../components/CustomHooks/VerCustomHooks";
 import VerCHTasks from "../components/CustomHooksTask/VerCHTasks";
 import VerBasicForm from "../components/BasicForm/VerBasicForm";
 import VerCounter from "../components/ReduxCounter/VerCounter";
+import VerReduxShop from "../components/ReduxShop/VerShop";
 
 const MenuApps = () => {
   return (
@@ -54,7 +55,10 @@ const MenuApps = () => {
             </li>                                                            
             <li>
               <Link to="/reduxcounter">Redux Counter</Link>
-            </li>                                                                        
+            </li>   
+            <li>
+              <Link to="/reduxshop">Redux Shop</Link>
+            </li>               
           </ul>
         </nav>
 
@@ -93,6 +97,9 @@ const MenuApps = () => {
           <Route path="/reduxcounter">
             <VerCounter />
           </Route>                    
+          <Route path="/reduxshop">
+            <VerReduxShop />
+          </Route>                              
         </Switch>
       </BrowserRouter>
     </div>
