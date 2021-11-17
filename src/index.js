@@ -4,7 +4,8 @@ import './index.css';
 import App from './containers/App';
 import { AuthContextProvider } from './components/LoginUsers/store/auth-context';
 import { Provider } from 'react-redux';
-import store from './store/index';
+// redux part1: import store from './store/index';
+import store from './storeshop/index';
 
 ReactDOM.render(
   <Provider store={store}>
