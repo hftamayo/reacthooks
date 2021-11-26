@@ -8,6 +8,10 @@ const cartSlice = createSlice({
     totalAmount: 0, //este item no esta considerado en el codigo de Max pero la voy a mantener
   },
   reducers: {
+    replaceCart(state, action){
+      state.totalQuantity = action.payload.totalQuantity;
+      state.items = action.payload.items;
+    },
     addItemToCart(state, action) {
       const newItem = action.payload;
       const existingItem = state.items.find((item) => item.id === newItem.id);
