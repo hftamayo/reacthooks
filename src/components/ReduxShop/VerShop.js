@@ -4,7 +4,7 @@ import Cart from "./Cart/Cart";
 import Layout from "./Layout/Layout";
 import Products from "./Shop/Products";
 import Notification from "./UI/Notification";
-import {sendCartData} from "../../storeshop/cart-slice";
+import {sendCartData, fetchCartData} from "../../storeshop/cart-actions";
 
 let isInitial = true;
 
@@ -14,6 +14,10 @@ function VerShop() {
   const showCart = useSelector((state) => state.ui.cartIsVisible);
   const cart = useSelector((state) => state.cart);
   const notification = useSelector((state) => state.ui.notification);
+
+  useEffect(() => {
+    dispatch(fetchCartData());
+  }, [dispatch]);
 
   useEffect(() => {
     if(isInitial){
