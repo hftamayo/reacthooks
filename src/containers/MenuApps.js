@@ -16,92 +16,95 @@ import VerReduxShop from "../components/ReduxShop/VerShop";
 const MenuApps = () => {
   return (
     <div>
-      <h1>Menu Apps</h1>
-      <BrowserRouter>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/todol">Todo List-- Vanilla+JS</Link>
-            </li>
-            <li>
-              <Link to="/expenses">Expenses-- JSX+Props+States</Link>
-            </li>
-            <li>
-              <Link to="/cgoals">CourseGoals -- Comp Styling</Link>
-            </li>
-            <li>
-              <Link to="/users">VerUsers -- Project 1</Link>
-            </li>
-            <li>
-              <Link to="/loginusers">LoginUsers -- Project 2</Link>
-            </li>
-            <li>
-              <Link to="/foodorder">FoodOrder -- Project 3</Link>
-            </li>            
-            <li>
-              <Link to="/userslist">UsersList -- Class Based</Link>
-            </li>            
-            <li>
-              <Link to="/vermovies">VerMovies -- API Callbacks</Link>
-            </li>                        
-            <li>
-              <Link to="/verchooks">CustomHooks</Link>
-            </li>
-            <li>
-              <Link to="/verchtasks">CH Tasks</Link>
-            </li>      
-            <li>
-              <Link to="/verbasicform">Basic Form</Link>
-            </li>                                                            
-            <li>
-              <Link to="/reduxcounter">Redux Counter</Link>
-            </li>   
-            <li>
-              <Link to="/reduxshop">Redux Shop</Link>
-            </li>               
-          </ul>
-        </nav>
+      <header></header>
+      <main>
+        <h1>Menu Apps</h1>
+        <BrowserRouter>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/todol">Todo List-- Vanilla+JS</Link>
+              </li>
+              <li>
+                <Link to="/expenses">Expenses-- JSX+Props+States</Link>
+              </li>
+              <li>
+                <Link to="/cgoals">CourseGoals -- Comp Styling</Link>
+              </li>
+              <li>
+                <Link to="/users">VerUsers -- Project 1</Link>
+              </li>
+              <li>
+                <Link to="/loginusers">LoginUsers -- Project 2</Link>
+              </li>
+              <li>
+                <Link to="/foodorder">FoodOrder -- Project 3</Link>
+              </li>
+              <li>
+                <Link to="/userslist">UsersList -- Class Based</Link>
+              </li>
+              <li>
+                <Link to="/vermovies">VerMovies -- API Callbacks</Link>
+              </li>
+              <li>
+                <Link to="/verchooks">CustomHooks</Link>
+              </li>
+              <li>
+                <Link to="/verchtasks">CH Tasks</Link>
+              </li>
+              <li>
+                <Link to="/verbasicform">Basic Form</Link>
+              </li>
+              <li>
+                <Link to="/reduxcounter">Redux Counter</Link>
+              </li>
+              <li>
+                <Link to="/reduxshop">Redux Shop</Link>
+              </li>
+            </ul>
+          </nav>
 
-        <Switch>
-          <Route path="/todol"></Route>
-          <Route path="/expenses">
-            <VerExpensesV3 />
-          </Route>
-          <Route path="/cgoals">
-            <VerGoals />
-          </Route>
-          <Route path="/users">
-            <VerUsers />
-          </Route>
-          <Route path="/loginusers">
-            <LoginUsers />
-          </Route>
-          <Route path="/foodorder">
-            <FoodOrder />
-          </Route>          
-          <Route path="/userslist">
-            <UserFinder />
-          </Route>                    
-          <Route path="/vermovies">
-            <VerMovies />
-          </Route>       
-          <Route path="/verchooks">
-            <VerCustomHooks />
-          </Route>
-          <Route path="/verchtasks">
-            <VerCHTasks />
-          </Route>
-          <Route path="/verbasicform">
-            <VerBasicForm />
-          </Route>          
-          <Route path="/reduxcounter">
-            <VerCounter />
-          </Route>                    
-          <Route path="/reduxshop">
-            <VerReduxShop />
-          </Route>                              
-        </Switch>
-      </BrowserRouter>
+          <Switch>
+            <Route path="/todol"></Route>
+            <Route path="/expenses">
+              <VerExpensesV3 />
+            </Route>
+            <Route path="/cgoals">
+              <VerGoals />
+            </Route>
+            <Route path="/users">
+              <VerUsers />
+            </Route>
+            <Route path="/loginusers">
+              <LoginUsers />
+            </Route>
+            <Route path="/foodorder">
+              <FoodOrder />
+            </Route>
+            <Route path="/userslist">
+              <UserFinder />
+            </Route>
+            <Route path="/vermovies">
+              <VerMovies />
+            </Route>
+            <Route path="/verchooks">
+              <VerCustomHooks />
+            </Route>
+            <Route path="/verchtasks">
+              <VerCHTasks />
+            </Route>
+            <Route path="/verbasicform">
+              <VerBasicForm />
+            </Route>
+            <Route path="/reduxcounter">
+              <VerCounter />
+            </Route>
+            <Route path="/reduxshop">
+              <VerReduxShop />
+            </Route>
+          </Switch>
+        </BrowserRouter>
+      </main>
     </div>
   );
 };
