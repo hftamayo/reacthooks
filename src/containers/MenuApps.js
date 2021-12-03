@@ -12,58 +12,15 @@ import VerCHTasks from "../components/CustomHooksTask/VerCHTasks";
 import VerBasicForm from "../components/BasicForm/VerBasicForm";
 import VerCounter from "../components/ReduxCounter/VerCounter";
 import VerReduxShop from "../components/ReduxShop/VerShop";
+import MainHeader from "./MainHeader";
+import ProductDetail from "../components/Products/ProductDetail";
 
 const MenuApps = () => {
   return (
     <div>
-      <header></header>
       <main>
-        <h1>Menu Apps</h1>
         <BrowserRouter>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/todol">Todo List-- Vanilla+JS</Link>
-              </li>
-              <li>
-                <Link to="/expenses">Expenses-- JSX+Props+States</Link>
-              </li>
-              <li>
-                <Link to="/cgoals">CourseGoals -- Comp Styling</Link>
-              </li>
-              <li>
-                <Link to="/users">VerUsers -- Project 1</Link>
-              </li>
-              <li>
-                <Link to="/loginusers">LoginUsers -- Project 2</Link>
-              </li>
-              <li>
-                <Link to="/foodorder">FoodOrder -- Project 3</Link>
-              </li>
-              <li>
-                <Link to="/userslist">UsersList -- Class Based</Link>
-              </li>
-              <li>
-                <Link to="/vermovies">VerMovies -- API Callbacks</Link>
-              </li>
-              <li>
-                <Link to="/verchooks">CustomHooks</Link>
-              </li>
-              <li>
-                <Link to="/verchtasks">CH Tasks</Link>
-              </li>
-              <li>
-                <Link to="/verbasicform">Basic Form</Link>
-              </li>
-              <li>
-                <Link to="/reduxcounter">Redux Counter</Link>
-              </li>
-              <li>
-                <Link to="/reduxshop">Redux Shop</Link>
-              </li>
-            </ul>
-          </nav>
-
+          <MainHeader />
           <Switch>
             <Route path="/todol"></Route>
             <Route path="/expenses">
@@ -101,6 +58,9 @@ const MenuApps = () => {
             </Route>
             <Route path="/reduxshop">
               <VerReduxShop />
+            </Route>
+            <Route path="/product-detail/:productId">
+              <ProductDetail />
             </Route>
           </Switch>
         </BrowserRouter>
