@@ -14,6 +14,7 @@ import VerCounter from "../components/ReduxCounter/VerCounter";
 import VerReduxShop from "../components/ReduxShop/VerShop";
 import MainHeader from "./MainHeader";
 import ProductDetail from "../components/Products/ProductDetail";
+import Products from "../components/Products/Products";
 
 const MenuApps = () => {
   return (
@@ -59,7 +60,11 @@ const MenuApps = () => {
             <Route path="/reduxshop">
               <VerReduxShop />
             </Route>
-            <Route path="/product-detail/:productId">
+            {/* exact es un parametro que permite distinguir que recurso mostrar */ }
+            <Route path="/products" exact>
+              <Products />
+            </Route>            
+            <Route path="/products/:productId">
               <ProductDetail />
             </Route>
           </Switch>
