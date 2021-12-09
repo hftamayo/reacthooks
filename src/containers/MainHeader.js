@@ -47,6 +47,9 @@ const MainHeader = () => {
             <NavLink activeClassName={classes.active} to="/reduxshop">Redux Shop</NavLink>
           </li>
           <li>
+            <NavLink activeClassName={classes.active} to="/welcome">Welcome</NavLink>
+          </li>                              
+          <li>
             <NavLink activeClassName={classes.active} to="/products">Products</NavLink>
           </li>                    
         </ul>

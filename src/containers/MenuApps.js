@@ -15,6 +15,7 @@ import VerReduxShop from "../components/ReduxShop/VerShop";
 import MainHeader from "./MainHeader";
 import ProductDetail from "../components/Products/ProductDetail";
 import Products from "../components/Products/Products";
+import Welcome from "../components/Products/Welcome";
 
 const MenuApps = () => {
   return (
@@ -59,6 +60,9 @@ const MenuApps = () => {
             </Route>
             <Route path="/reduxshop">
               <VerReduxShop />
+            </Route>
+            <Route path="/welcome">
+              <Welcome />
             </Route>
             {/* exact es un parametro que permite distinguir que recurso mostrar */ }
             <Route path="/products" exact>
