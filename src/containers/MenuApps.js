@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Link, Switch, Redirect } from "react-router-dom";
 import VerExpensesV3 from "./VerExpensesV3";
 import VerGoals from "../components/CourseGoals/VerGoals";
 import VerUsers from "../components/Users/VerUsers";
@@ -60,6 +60,9 @@ const MenuApps = () => {
             </Route>
             <Route path="/reduxshop">
               <VerReduxShop />
+            </Route>
+            <Route path="/" exact>
+              <Redirect to="/welcome" />
             </Route>
             <Route path="/welcome">
               <Welcome />
