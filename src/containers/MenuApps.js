@@ -16,6 +16,7 @@ import MainHeader from "./MainHeader";
 import ProductDetail from "../components/Products/ProductDetail";
 import Products from "../components/Products/Products";
 import Welcome from "../components/Products/Welcome";
+import VerQuotes from "../components/Quotes/VerQuotes";
 
 const MenuApps = () => {
   return (
@@ -73,6 +74,9 @@ const MenuApps = () => {
             </Route>            
             <Route path="/products/:productId">
               <ProductDetail />
+            </Route>
+            <Route path="/verquotes">
+              <VerQuotes />
             </Route>
           </Switch>
         </BrowserRouter>

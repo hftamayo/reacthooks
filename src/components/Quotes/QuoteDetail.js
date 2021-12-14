@@ -1,5 +1,7 @@
 import { Fragment } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Route } from 'react-router-dom';
+
+import Comments from './Comments/Comments';
 
 const QuoteDetail = () => {
     const params = useParams();
@@ -7,6 +9,8 @@ const QuoteDetail = () => {
         <Fragment>
             <h1>Quote Details</h1>
             <p>{params.quoteId}</p>
+            <Route path={`/quotes/${params.quoteId}/comments`}></Route>
+            <Comments />
         </Fragment>
 
     );

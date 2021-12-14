@@ -5,7 +5,7 @@ import QuoteDetail from "./QuoteDetail";
 
 function VerQuotes() {
   return (
-    <Browser>
+    <BrowserRouter>
       <Switch>
         <Route path="/" exact>
           <Redirect to="/quotes" />
@@ -21,6 +21,8 @@ function VerQuotes() {
           <NewQuote />
         </Route>
       </Switch>
-    </Browser>
+    </BrowserRouter>
   );
-}
+};
+
+export default VerQuotes;
