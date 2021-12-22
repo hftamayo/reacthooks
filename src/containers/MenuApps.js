@@ -17,6 +17,7 @@ import ProductDetail from "../components/Products/ProductDetail";
 import Products from "../components/Products/Products";
 import Welcome from "../components/Products/Welcome";
 import VerQuotes from "../components/Quotes/VerQuotes";
+import NotFound from "../components/Quotes/NotFound";
 
 const MenuApps = () => {
   return (
@@ -77,6 +78,9 @@ const MenuApps = () => {
             </Route>
             <Route path="/verquotes">
               <VerQuotes />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </BrowserRouter>
