@@ -1,8 +1,11 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { useParams, Route, useRouteMatch, Link } from "react-router-dom";
 
 import HighlightedQuote from "./components/HighlightedQuote";
 import Comments from "./Comments/Comments";
+import useHttp from "./hooks/use-http";
+import { getSingleQuote } from "./lib/api";
+import LoadingSpinner from "./UI/LoadingSpinner";
 
 const DUMMY_NOTES = [
   {
@@ -20,15 +23,34 @@ const DUMMY_NOTES = [
 const QuoteDetail = () => {
   const match = useRouteMatch();
   const params = useParams();
+  const { quoteId } = params;
 
-  const quote = DUMMY_NOTES.find((quote) => quote.id === params.quoteId);
 
-  if (!quote) {
+  const { sendRequest, status, data: loadedQuote, error } = useHttp(getSingleQuote, true);
+
+  //const quote = DUMMY_NOTES.find((quote) => quote.id === params.quoteId);
+  useEffect(() => {
+    sendRequest(quoteId);
+  }, [sendRequest, quoteId]);
+
+  if(status === "pending"){
+    return (
+      <div className="centered">
+        <LoadingSpinner />
+      </div>
+    );
+  }
+
+  if(error){
+    return <p className="centered">{error}</p>;
+  }
+
+  if (!loadedQuote.text) {
     return <p>No Quote Found!</p>;
   }
   return (
     <Fragment>
-      <HighlightedQuote text={quote.text} author={quote.author} />
+      <HighlightedQuote text={loadedQuote.text} author={loadedQuote.author} />
       <Route path={match.path} exact>
         <div className="centered">
           <Link
