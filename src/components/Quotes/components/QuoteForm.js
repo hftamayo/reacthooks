@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { useRef, useState } from "react";
-import { Prompt } from "react-router-dom";
+import { usePrompt } from "react-router-dom";
 
 import Card from "../UI/Card";
 import LoadingSpinner from "../UI/LoadingSpinner";
@@ -24,7 +24,7 @@ const QuoteForm = (props) => {
 
   const finishEnteringHandler = () => {
     setIsEntering(false);
-  }
+  };
 
   const formFocusHandler = () => {
     setIsEntering(true);
@@ -32,12 +32,21 @@ const QuoteForm = (props) => {
 
   return (
     <Fragment>
+      {/*Prompt hook is deprecated in react router 6. One alernative is use usePrompt 
       <Prompt
         when={isEntering}
         message={(location) =>
           "Are you sure you want to move to previous page?. All your changes will be lost"
         }
-      />
+      />      
+      */}
+
+      usePrompt(message=
+      {(location) =>
+        "Are you sure you want to move to previous page?. Changes will be lost"
+      }
+      , isEntering);
+      
       <Card>
         <form
           onFocus={formFocusHandler}
@@ -58,7 +67,9 @@ const QuoteForm = (props) => {
             <textarea id="text" rows="5" ref={textInputRef}></textarea>
           </div>
           <div className={classes.actions}>
-            <button onClick={finishEnteringHandler} className="btn">Add Quote</button>
+            <button onClick={finishEnteringHandler} className="btn">
+              Add Quote
+            </button>
           </div>
         </form>
       </Card>

@@ -8,52 +8,52 @@ const MainHeader = () => {
       <nav>
         <ul>
           <li>
-            <NavLink activeClassName={classes.active} to="/todol">Todo List{/*-- Vanilla+JS*/}</NavLink>
+            <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to="/todol">Todo List{/*-- Vanilla+JS*/}</NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/expenses">Expenses{/*-- JSX+Props+States*/}</NavLink>
+            <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to="/expenses">Expenses{/*-- JSX+Props+States*/}</NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/cgoals">CourseGoals{/* -- Comp Styling*/}</NavLink>
+            <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to="/cgoals">CourseGoals{/* -- Comp Styling*/}</NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/users">VerUsers{/* -- Project 1*/}</NavLink>
+            <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to="/users">VerUsers{/* -- Project 1*/}</NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/loginusers">LoginUsers{/* -- Project 2*/}</NavLink>
+            <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to="/loginusers">LoginUsers{/* -- Project 2*/}</NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/foodorder">FoodOrder{/* -- Project 3*/}</NavLink>
+            <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to="/foodorder">FoodOrder{/* -- Project 3*/}</NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/userslist">UsersList{/* -- Class Based*/}</NavLink>
+            <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to="/userslist">UsersList{/* -- Class Based*/}</NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/vermovies">VerMovies{/* -- API Callbacks*/}</NavLink>
+            <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to="/vermovies">VerMovies{/* -- API Callbacks*/}</NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/verchooks">CustomHooks</NavLink>
+            <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to="/verchooks">CustomHooks</NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/verchtasks">CHTasks</NavLink>
+            <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to="/verchtasks">CHTasks</NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/verbasicform">Basic Form</NavLink>
+            <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to="/verbasicform">Basic Form</NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/reduxcounter">Redux Counter</NavLink>
+            <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to="/reduxcounter">Redux Counter</NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/reduxshop">Redux Shop</NavLink>
+            <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to="/reduxshop">Redux Shop</NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/welcome">Welcome</NavLink>
+            <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to="/welcome">Welcome</NavLink>
           </li>                              
           <li>
-            <NavLink activeClassName={classes.active} to="/products">Products</NavLink>
+            <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to="/products">Products</NavLink>
           </li>                    
           <li>
-            <NavLink activeClassName={classes.active} to="/verquotes">Quotes</NavLink>
+            <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to="/verquotes">Quotes</NavLink>
           </li>                              
         </ul>
       </nav>

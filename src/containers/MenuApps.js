@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Link, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Link, Routes, Navigate } from "react-router-dom";
 import VerExpensesV3 from "./VerExpensesV3";
 import VerGoals from "../components/CourseGoals/VerGoals";
 import VerUsers from "../components/Users/VerUsers";
@@ -25,64 +25,45 @@ const MenuApps = () => {
       <main>
         <BrowserRouter>
           <MainHeader />
-          <Switch>
+          <Routes>
             <Route path="/todol"></Route>
-            <Route path="/expenses">
-              <VerExpensesV3 />
+            <Route path="/expenses" element={<VerExpensesV3 />} />
+
+            <Route path="/cgoals" element={<VerGoals />} />
+
+            <Route path="/users" element={<VerUsers />} />
+
+            <Route path="/loginusers" element={<LoginUsers />} />
+
+            <Route path="/foodorder" element={<FoodOrder />} />
+
+            <Route path="/userslist" element={<UserFinder />} />
+
+            <Route path="/vermovies" element={<VerMovies />} />
+
+            <Route path="/verchooks" element={<VerCustomHooks />} />
+
+            <Route path="/verchtasks" element={<VerCHTasks />} />
+
+            <Route path="/verbasicform" element={<VerBasicForm />} />
+
+            <Route path="/reduxcounter" element={<VerCounter />} />
+
+            <Route path="/reduxshop" element={<VerReduxShop />} />
+
+            <Route path="/" element={<Navigate to="/welcome" />}>
+              <Route path="/welcome/*" element={<Welcome />} />
+              <Route path="new-user" element={<p>Welcome new user</p>} />
             </Route>
-            <Route path="/cgoals">
-              <VerGoals />
-            </Route>
-            <Route path="/users">
-              <VerUsers />
-            </Route>
-            <Route path="/loginusers">
-              <LoginUsers />
-            </Route>
-            <Route path="/foodorder">
-              <FoodOrder />
-            </Route>
-            <Route path="/userslist">
-              <UserFinder />
-            </Route>
-            <Route path="/vermovies">
-              <VerMovies />
-            </Route>
-            <Route path="/verchooks">
-              <VerCustomHooks />
-            </Route>
-            <Route path="/verchtasks">
-              <VerCHTasks />
-            </Route>
-            <Route path="/verbasicform">
-              <VerBasicForm />
-            </Route>
-            <Route path="/reduxcounter">
-              <VerCounter />
-            </Route>
-            <Route path="/reduxshop">
-              <VerReduxShop />
-            </Route>
-            <Route path="/" exact>
-              <Redirect to="/welcome" />
-            </Route>
-            <Route path="/welcome">
-              <Welcome />
-            </Route>
-            {/* exact es un parametro que permite distinguir que recurso mostrar */ }
-            <Route path="/products" exact>
-              <Products />
-            </Route>            
-            <Route path="/products/:productId">
-              <ProductDetail />
-            </Route>
-            <Route path="/verquotes">
-              <VerQuotes />
-            </Route>
-            <Route path="*">
-              <NotFound />
-            </Route>
-          </Switch>
+
+            <Route path="/products" element={<Products />} />
+
+            <Route path="/products/:productId" element={<ProductDetail />} />
+
+            <Route path="/verquotes" element={<VerQuotes />} />
+
+            <Route path="*" element={<NotFound />} />
+          </Routes>
         </BrowserRouter>
       </main>
     </div>
