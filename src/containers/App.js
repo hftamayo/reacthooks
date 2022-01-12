@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import VerTodo from './VerTodo';
-import MenuApps from './MenuApps';
-
+import VerQuotes from '../components/Quotes/VerQuotes';
 
 const App = () => {
   return(
     <div>
-      <MenuApps />
+      <VerQuotes />
     </div>
 
   );

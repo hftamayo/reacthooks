@@ -1,28 +1,28 @@
-import { Route, Switch, Redirect, useRouteMatch } from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Routes, Navigate } from "react-router-dom";
 import AllQuotes from "./AllQuotes";
 import NewQuote from "./NewQuote";
 import QuoteDetail from "./QuoteDetail";
 import Layout from "./layout/Layout";
 
-function VerQuotes() {
-  const { path, url } = useRouteMatch();
+const VerQuotes = () => {
   return (
-    <Layout>
-      <Switch>
-        <Route path={`${path}/quotes/:quoteId`}>
-          <QuoteDetail />
-        </Route>
-        {/* si no pongo exact no se renderiza la segunda opcion */}
-        <Route path={`${path}/quotes`}>
-          <AllQuotes />
-        </Route>
-        <Route path={`${path}/new-quote`}>
-          <NewQuote />
-        </Route>
-        <Redirect from={path} to={`${path}/quotes`} />
-      </Switch>
-    </Layout>
+    <div>
+      <main>
+        <BrowserRouter>
+          <Layout>
+            <Routes>
+              <Route path="/quotes" element={<AllQuotes />} />
+
+              <Route path="/new-quote" element={<NewQuote />} />
+
+              <Route path="/quotes/:quoteId" element={<QuoteDetail />} />
+            </Routes>
+          </Layout>
+        </BrowserRouter>
+      </main>
+    </div>
   );
-}
+};
 
 export default VerQuotes;
