@@ -1,9 +1,9 @@
-import { Link, useRouteMatch } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import classes from './QuoteItem.module.css';
 
 const QuoteItem = (props) => {
-  const { path, url } = useRouteMatch();  
+  const  path = useNavigate();  
   return (
     <li className={classes.item}>
       <figure>

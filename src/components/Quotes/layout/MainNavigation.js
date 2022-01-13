@@ -1,8 +1,8 @@
-import { NavLink, useRouteMatch } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 
 const MainNavigation = () => {
-  const { path, url } = useRouteMatch();
+  const path = useNavigate();
   return (
     <header className={classes.header}>
       <div className={classes.logo}>Great Quotes</div>

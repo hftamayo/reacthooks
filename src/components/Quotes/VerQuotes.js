@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import AllQuotes from "./AllQuotes";
 import NewQuote from "./NewQuote";
 import QuoteDetail from "./QuoteDetail";
@@ -9,17 +9,15 @@ const VerQuotes = () => {
   return (
     <div>
       <main>
-        <BrowserRouter>
-          <Layout>
-            <Routes>
-              <Route path="/quotes" element={<AllQuotes />} />
+        <Layout>
+          <Routes>
+            <Route path="/quotes" element={<AllQuotes />} />
 
-              <Route path="/new-quote" element={<NewQuote />} />
+            <Route path="/new-quote" element={<NewQuote />} />
 
-              <Route path="/quotes/:quoteId" element={<QuoteDetail />} />
-            </Routes>
-          </Layout>
-        </BrowserRouter>
+            <Route path="/quotes/:quoteId" element={<QuoteDetail />} />
+          </Routes>
+        </Layout>
       </main>
     </div>
   );
