@@ -11,11 +11,11 @@ const VerQuotes = () => {
       <main>
         <Layout>
           <Routes>
-            <Route path="/quotes" element={<AllQuotes />} />
+            <Route path="quotes" element={<AllQuotes />} />
 
-            <Route path="/new-quote" element={<NewQuote />} />
+            <Route path="new-quote" element={<NewQuote />} />
 
-            <Route path="/quotes/:quoteId" element={<QuoteDetail />} />
+            <Route path="quotes/:quoteId" element={<QuoteDetail />} />
           </Routes>
         </Layout>
       </main>
