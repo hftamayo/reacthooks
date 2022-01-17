@@ -40,13 +40,8 @@ const QuoteForm = (props) => {
         }
       />      
       */}
-
-      usePrompt(message=
-      {(location) =>
-        "Are you sure you want to move to previous page?. Changes will be lost"
-      }
-      , isEntering);
-      
+      usePrompt("Are you sure you want to move to previous page?. Changes will
+      be lost", isEntering);
       <Card>
         <form
           onFocus={formFocusHandler}
