@@ -1,9 +1,8 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import classes from './QuoteItem.module.css';
 
-const QuoteItem = (props) => {
-  const  path = useNavigate();  
+const QuoteItem = (props) => { 
   return (
     <li className={classes.item}>
       <figure>
@@ -13,7 +12,7 @@ const QuoteItem = (props) => {
         <figcaption>{props.author}</figcaption>
       </figure>
       <div className={classes.item}>
-          <Link className='btn' to={`${path}/${props.id}`}>View Fullscreen</Link>
+          <Link className='btn' to={`quotes/${props.id}`}>View Fullscreen</Link>
         </div>
     </li>
   );
