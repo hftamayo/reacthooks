@@ -2,19 +2,18 @@ import { NavLink, useNavigate } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 
 const MainNavigation = () => {
-  const path = useNavigate();
   return (
     <header className={classes.header}>
       <div className={classes.logo}>Great Quotes</div>
       <nav className={classes.nav}>
         <ul>
           <li>
-            <NavLink to={`${path}/quotes`} activeClassName={classes.active}>
+            <NavLink to={`/quotes`} activeClassName={classes.active}>
               All Quotes
             </NavLink>
           </li>
           <li>
-            <NavLink to={`${path}/new-quote`} activeClassName={classes.active}>
+            <NavLink to={`/new-quote`} activeClassName={classes.active}>
               Add a Quote
             </NavLink>
           </li>
